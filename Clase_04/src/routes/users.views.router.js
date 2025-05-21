@@ -17,7 +17,7 @@ router.get('/register', (req, res) => {
 router.get('/',
     // authToken, 
     passportCall('jwt'),
-    authorization('admin'),
+    authorization('user'),
     (req, res) => {
         res.render("profile", {
             // user: req.session.user
